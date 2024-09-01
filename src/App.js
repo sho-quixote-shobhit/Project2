@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import Header from './components/LandingPage/Header/Header'
+import Pass from './components/LandingPage/Pass/Pass'
+import Ad from './components/LandingPage/Ad/Ad'
+import Content from './components/LandingPage/Content/Content'
+import MovingAd from './components/LandingPage/MovingAd/MovingAd'
+import Images from './components/LandingPage/Images/Images'
+import Testimonials from './components/LandingPage/Testimonials/Testimonials'
+import Contact from './components/LandingPage/Contact/Contact'
+import Footer from './components/Footer/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Navbar />
+            <Header />
+            <Pass />
+            <Ad />
+            <Content />
+            <MovingAd />
+            <Images />
+            <Testimonials />
+            <Contact />
+            <Footer />  
+        </>
+    )
 }
 
-export default App;
+export default App
