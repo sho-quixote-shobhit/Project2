@@ -5,6 +5,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import data from './data'
+import { useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
@@ -29,6 +30,12 @@ const Header = () => {
         slidesToScroll: 1,
         
     };
+
+    const navigate = useNavigate();
+
+    const handleTalktoexpert = () => {
+        navigate('/contact')
+    }
 
     return (
         <Box w="100%" p="80px 0px 30px 0px" bg='#E8ECE9' mt = "74px">
@@ -60,9 +67,11 @@ const Header = () => {
                         p={{base : '5px 10px' , lg : '10px 15px'}}
                         bg='#cc3c28'
                         borderRadius="5px"
+                        
                         color='white'
                         fontWeight={{base : '500' , lg : '600'}}
                         cursor='pointer'
+                        onClick={handleTalktoexpert}
                     >
                         TALK TO AN EXPERT
                     </Box>

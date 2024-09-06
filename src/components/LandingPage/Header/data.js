@@ -16,7 +16,7 @@ const data = [
     },
     {
         title: 'video clips',
-        img: img2
+        img: img7
     },
     {
         title: 'social content',

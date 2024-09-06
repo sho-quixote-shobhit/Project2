@@ -1,26 +1,27 @@
-import { ChevronDownIcon, ChevronUpIcon, HamburgerIcon } from '@chakra-ui/icons'
-import { Box, Text, Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { Box, Text } from '@chakra-ui/react'
+import Aitoolsmenu from './Aitoolsmenu'
+import Studiomenu from './Studiomenu'
+import { useState } from 'react'
+import Resourcesmenu from './Resourcesmenu'
+import { useNavigate } from 'react-router-dom'
+
 
 const Navbar = () => {
-    const [isAIclicked, setisAIclicked] = useState(false);
-    const [isStudioClicked, setisStudioClicked] = useState(false);
-    const [isResourcesClicked, setisResourcesClicked] = useState(false);
 
-    const handleClick = (val) => {
-        if (val === 1) {
-            setisAIclicked(!isAIclicked);
-            setisStudioClicked(false);
-            setisResourcesClicked(false);
-        } else if (val === 2) {
-            setisAIclicked(false);
-            setisStudioClicked(!isStudioClicked);
-            setisResourcesClicked(false);
-        } else {
-            setisAIclicked(false);
-            setisStudioClicked(false);
-            setisResourcesClicked(!isResourcesClicked);
-        }
+    const [isVisible1, setIsVisible1] = useState(false)
+    const [isVisible2, setIsVisible2] = useState(false)
+    const [isVisible3, setIsVisible3] = useState(false)
+
+    const navigate = useNavigate()
+
+    const handleLandingPage = () => {
+        console.log('hi')
+        navigate('/')
+    }
+
+    const handleEnterprise = () =>{
+        navigate('/enterprise')
     }
 
     return (
@@ -59,6 +60,8 @@ const Navbar = () => {
                         fontSize={{ base: '25px', lg: '35px' }}
                         fontFamily="'Inter', serif"
                         p={0}
+                        cursor='pointer'
+                        onClick={handleLandingPage}
                     >
                         soona
                     </Text>
@@ -71,56 +74,40 @@ const Navbar = () => {
                     alignItems='center'
                     fontSize='15px'
                     p="5px 0px 0px 0px"
-                    color='#cc3c28'
-                    fontWeight="600"
                 >
                     {/* left */}
                     <Box
                         display={{ base: 'none', lg: 'flex' }}
-                        gap='15px'
+                        gap='10px'
                         alignItems='center'
                     >
                         {/* AI TOOLS Dropdown */}
-                        <Menu isOpen={isAIclicked}>
-                            <MenuButton fontWeight="bold" as={Button} variant="ghost" onClick={() => handleClick(1)} rightIcon={isAIclicked ? <ChevronUpIcon /> : <ChevronDownIcon />}>
-                                AI TOOLS
-                            </MenuButton>
-                            <MenuList bg="white" p = {5} borderRadius="20px">
-                                <MenuItem>Tool 1</MenuItem>
-                                <MenuItem>Tool 2</MenuItem>
-                                <MenuItem>Tool 3</MenuItem>
-                            </MenuList>
-                        </Menu>
+                        <Box onMouseEnter={() => setIsVisible1(true)}
+                            onMouseLeave={() => setIsVisible1(false)}>
+                            <Text fontWeight='bold' cursor='pointer' color='#cc3c28' >AI TOOLS <ChevronDownIcon /> </Text>
+                            <Aitoolsmenu isVisible={isVisible1} setIsVisible={setIsVisible1} />
+                        </Box>
+
 
                         {/* STUDIO Dropdown */}
-                        <Menu isOpen={isStudioClicked}>
-                            <MenuButton fontWeight="bold" as={Button} variant="ghost" onClick={() => handleClick(2)} rightIcon={isStudioClicked ? <ChevronUpIcon /> : <ChevronDownIcon />}>
-                                STUDIO
-                            </MenuButton>
-                            <MenuList bg="white" p = {5} borderRadius="20px">
-                                <MenuItem>Studio 1</MenuItem>
-                                <MenuItem>Studio 2</MenuItem>
-                                <MenuItem>Studio 3</MenuItem>
-                            </MenuList>
-                        </Menu>
+                        <Box onMouseEnter={() => setIsVisible2(true)}
+                            onMouseLeave={() => setIsVisible2(false)}>
+                            <Text fontWeight='bold' cursor='pointer' color='#cc3c28' >STUDIO <ChevronDownIcon /> </Text>
+                            <Studiomenu isVisible={isVisible2} setIsVisible={setIsVisible2} />
+                        </Box>
 
-                        <Box>
-                            <Text>UGC</Text>
+                        <Box cursor='pointer' fontWeight='bold'>
+                            <Text color='#cc3c28'>UGC</Text>
                         </Box>
 
                         {/* RESOURCES Dropdown */}
-                        <Menu isOpen={isResourcesClicked} >
-                            <MenuButton fontWeight="bold" as={Button} variant="ghost" onClick={() => handleClick(3)} rightIcon={isResourcesClicked ? <ChevronUpIcon /> : <ChevronDownIcon />}>
-                                RESOURCES
-                            </MenuButton>
-                            <MenuList bg="white" p = {5} borderRadius="20px">
-                                <MenuItem>Resource 1</MenuItem>
-                                <MenuItem>Resource 2</MenuItem>
-                                <MenuItem>Resource 3</MenuItem>
-                            </MenuList>
-                        </Menu>
+                        <Box onMouseEnter={() => setIsVisible3(true)}
+                            onMouseLeave={() => setIsVisible3(false)}>
+                            <Text fontWeight='bold' cursor='pointer' color='#cc3c28' >RESOURCES <ChevronDownIcon /> </Text>
+                            <Resourcesmenu isVisible={isVisible3} setIsVisible={setIsVisible3} />
+                        </Box>
 
-                        <Box>
+                        <Box onClick={handleEnterprise} fontWeight='bold' cursor='pointer' color='#cc3c28'>
                             <Text>ENTERPRISE</Text>
                         </Box>
                     </Box>
@@ -131,7 +118,7 @@ const Navbar = () => {
                         gap='15px'
                         alignItems='center'
                     >
-                        <Box>
+                        <Box cursor='pointer'>
                             <Text>SIGN IN</Text>
                         </Box>
 
@@ -142,6 +129,7 @@ const Navbar = () => {
                             p="10px 15px"
                             bg='#cc3c28'
                             borderRadius="10px"
+                            cursor='pointer'
                         >
                             <Text
                                 color="white"

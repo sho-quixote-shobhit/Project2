@@ -29,10 +29,10 @@ const data1 = [
         img: img4
     },
     {
-        img: img5
+        img: img4
     },
     {
-        img: img6
+        img: img2
     },
     {
         img: img7
@@ -59,7 +59,7 @@ const data1 = [
         img : img14
     },
     {
-        img : img15
+        img : img1
     },
     {
         img : img16
