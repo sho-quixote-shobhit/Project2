@@ -49,7 +49,7 @@ const Studiomenu = ({ isVisible, setIsVisible }) => {
                                     STUDIO
                                 </Text>
                                 <Text>
-                                    when software only goes so far it’s time to come (virtually) to soona studios. three state of the art photography studios purpose-built for e-commerce content.
+                                    when software only goes so far it’s time to come (virtually) to lorem studios. three state of the art photography studios purpose-built for e-commerce content.
                                 </Text>
                             </Box>
 

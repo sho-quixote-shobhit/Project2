@@ -30,6 +30,10 @@ const EnterprisePass = () => {
         }
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <Box
             p="80px 0px"
@@ -43,8 +47,8 @@ const EnterprisePass = () => {
                 alignItems="center"
                 gap="40px"
             >
-                <Text align = "center" fontSize={{base : '35px' , lg : '40px'}} fontFamily="'Inter' , serif">make soona your ghost studio</Text>
-                <Text align = "center">fully integrate soona with your team to make our crew - your crew.</Text>
+                <Text align = "center" fontSize={{base : '35px' , lg : '40px'}} fontFamily="'Inter' , serif">make lorem your ghost studio</Text>
+                <Text align = "center">fully integrate lorem with your team to make our crew - your crew.</Text>
                 <Grid
                     templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }} 
                     gap={6} 

@@ -50,7 +50,7 @@ const ScrollingImages = () => {
                     borderRadius="10px"
                 />
                 <Image
-                    src="https://cdn.prod.website-files.com/622327bc87949d02598242bf/656915dfb542ddf3d44a1157_soona_internal_r1_5186%20(2).webp"
+                    src="https://cdn.prod.website-files.com/622327bc87949d02598242bf/656915df74fd2379e6b95871_web_AMOREPACIFIC%20US_r1_9326-p-500.webp"
                     alt="Image 3"
                     h="100%"
                     w = "400px"

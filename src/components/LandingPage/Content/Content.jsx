@@ -397,7 +397,7 @@ const Content = () => {
                         <Text
                             w="90%"
                         >
-                            speed up your creative workflow and unlock product level insights with soona apps for Amazon and Shopify.
+                            speed up your creative workflow and unlock product level insights with lorem apps for Amazon and Shopify.
                         </Text>
 
                         <Box

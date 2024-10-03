@@ -4,25 +4,31 @@ import Aitoolsmenu from './Aitoolsmenu'
 import Studiomenu from './Studiomenu'
 import { useState } from 'react'
 import Resourcesmenu from './Resourcesmenu'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
+    
 
     const [isVisible1, setIsVisible1] = useState(false)
     const [isVisible2, setIsVisible2] = useState(false)
     const [isVisible3, setIsVisible3] = useState(false)
 
     const navigate = useNavigate()
+    const location = useLocation();
 
     const handleLandingPage = () => {
         console.log('hi')
         navigate('/')
     }
 
-    const handleEnterprise = () =>{
-        navigate('/enterprise')
-    }
+    const handleEnterprise = () => {
+        if (location.pathname === '/enterprise') {
+            window.scrollTo(0, 0);  
+        } else {
+            navigate('/enterprise'); 
+        }
+    };
 
     return (
         <Box
@@ -63,7 +69,7 @@ const Navbar = () => {
                         cursor='pointer'
                         onClick={handleLandingPage}
                     >
-                        soona
+                        Lorem
                     </Text>
                 </Box>
 

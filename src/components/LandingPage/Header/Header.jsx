@@ -57,7 +57,7 @@ const Header = () => {
                     </Text>
 
                     <Text fontSize="18px">
-                        soona is your all-in-one content creation suite.
+                        lorem is your all-in-one content creation suite.
                     </Text>
 
                     <Box

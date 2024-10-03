@@ -49,7 +49,7 @@ const EnterpriseHeader = () => {
                     gap="20px"
                     alignItems={{base : 'center' , lg : 'flex-start'}}
                 >
-                    <Text align={{base : 'center' , lg : 'left'}} fontSize={{ base: '40px', lg: '48px' }} fontFamily="'Inter', serif">SOONA FOR ENTERPRISE</Text>
+                    <Text align={{base : 'center' , lg : 'left'}} fontSize={{ base: '40px', lg: '48px' }} fontFamily="'Inter', serif">lorem FOR ENTERPRISE</Text>
                     <Text align="center">built for large brands that demand photo, video and UGC at scale.</Text>
                     <Box py={3} px={1} color="white" fontWeight="bold" bg="#cc3c28" w={{ base: '90%', md : '60%' , lg: '60%' }} borderRadius="10px" cursor="pointer">
                         <Text align='center' fontFamily="'Inter', serif">CONNECT WITH AN ENTERPRISE EXPERT</Text>

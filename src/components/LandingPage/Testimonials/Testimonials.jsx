@@ -137,7 +137,7 @@ const Testimonials = () => {
                             gap="20px"
                             justifyContent='center'
                         >
-                            <Text fontSize={{ base: '35px', lg: '40px' }}>Why top brands use soona.</Text>
+                            <Text fontSize={{ base: '35px', lg: '40px' }}>Why top brands use lorem.</Text>
                             <Box>
                                 <Text fontSize={{ base: '17px', lg: '25px' }} fontWeight='bold'>content delivered 5x faster at 2/3 of the cost</Text>
                                 <Text fontSize={{ base: '15px', lg: '20px' }} >24 hour delivery on every asset</Text>

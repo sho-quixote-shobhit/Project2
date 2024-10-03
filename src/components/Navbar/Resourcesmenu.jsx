@@ -91,7 +91,7 @@ const Resourcesmenu = ({isVisible , setIsVisible}) => {
                                             free tools
                                         </Text>
                                         <Text>
-                                            good for getting started with soona.
+                                            good for getting started with lorem.
                                         </Text>
                                     </Box>
                                 </Box>
@@ -264,7 +264,7 @@ const Resourcesmenu = ({isVisible , setIsVisible}) => {
                             <Box
                                 w="40%"
                             >
-                                <Text mb={5} fontSize="18px" fontWeight="bold">SOONA SCORE</Text>
+                                <Text mb={5} fontSize="18px" fontWeight="bold">lorem SCORE</Text>
                                 <Box
                                     display="flex"
                                     flexDir="column"
